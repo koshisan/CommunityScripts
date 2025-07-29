@@ -176,7 +176,7 @@ class NfoParser(AbstractParser):
             # TODO: supports stash uniqueid to match to existing scenes (compatibility with nfo exporter)
             "file": self._nfo_file,
             "source": "nfo",
-            "title": self._nfo_root.findtext("originaltitle") or self._nfo_root.findtext("title") \
+            "title": self._nfo_root.findtext("title") or self._nfo_root.findtext("originaltitle") \
             or self._nfo_root.findtext("sorttitle") or self._get_default("title", "re"),
             "director": self._nfo_root.findtext("director") or self._get_default("director"),
             "details": self._nfo_root.findtext("plot") or self._nfo_root.findtext("outline") \
